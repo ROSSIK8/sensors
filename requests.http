@@ -1,0 +1,41 @@
+# Список датчиков
+GET http://127.0.0.1:8000/api/sensors
+
+###
+
+# Инф. по датчику
+GET http://127.0.0.1:8000/api/sensor/1
+
+###
+
+# Создание датчика
+POST http://127.0.0.1:8000/api/sensors
+Content-Type: application/json
+
+{
+  "name": "ESdfghj3cdfgh2",
+  "description": "Датчик на кухне за холодильником"
+}
+
+###
+
+# Обновление датчика
+PATCH  http://127.0.0.1:8000/api/sensor/1
+Content-Type: application/json
+
+{
+  "name": "Сенсор 1",
+  "description": "Это датчик :)"
+}
+
+###
+
+# Добавление измерения
+POST http://127.0.0.1:8000/api/add_measurement
+Content-Type: application/json
+
+{
+  "sensor": 6,
+  "temperature": 34.4
+}
+
